@@ -1,0 +1,101 @@
+/*DIV SETUPS*/
+/* div{
+  border: dotted red 1px;
+} */
+
+/*LOGIN AND SIGNUP PAGE */
+#signup-form-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 5px;
+}
+
+#login-form-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 5px;
+}
+
+#form-box {
+  display: flex;
+  margin-top: 30px;
+  width: 60%;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+}
+@media (max-width: 800px) {
+  #form-box {
+    width: 100%;
+    max-width: 400px;
+    flex-direction: column-reverse;
+  }
+  #left-form-box {
+    width: 100% !important;
+  }
+  #right-form-box {
+    width: 100% !important;
+  }
+}
+@media (max-width: 420px) {
+  #fp-text {
+    font-size: 60px !important;
+  }
+}
+
+#left-form-box {
+  width: 50%;
+  padding: 50px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+}
+#right-form-box {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  background: linear-gradient(to right, #2db615, #3cfd52);
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+  color: white;
+  padding: 15px;
+  justify-content: center;
+}
+/*PRIMARY BUTTONS*/
+.btn-primary {
+  background-color: #4CB944;
+  color: rgb(255, 255, 255);
+  --bs-btn-active-bg: #4CB944;
+}
+.btn-primary:hover {
+  background-color: #4CB944;
+}
+
+/*TRY BUTTON*/
+html {
+  scroll-behavior: smooth;
+}
+.btn-lg:hover {
+  transform: scale(1.1);
+}
+.btn-lg {
+  transition: transform 0.3s ease-in-out;
+  text-shadow: 0.5px 0px 0.5px #fff;
+}
+@keyframes bubble {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+#selectionLimitModal {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1050; /* Ensure modal is on top */
+}
