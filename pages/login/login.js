@@ -2,8 +2,8 @@ import { API_URL } from "../../settings.js";
 import { handleHttpErrors } from "../../utility.js";
 
 export function initLogin(match) {
-  document.querySelector("#login-fail").innerText = "";
   document.querySelector("#login-btn").addEventListener("click", login);
+  document.querySelector("#login-fail").innerText = "";
 }
 
 async function login() {
@@ -54,7 +54,7 @@ export function logout() {
 }
 
 export function toggleLoginStatus(loggedIn) {
-  const navBar = document.querySelector(".navbar"); 
+  const navBar = document.querySelector(".navbar");
   navBar.style.display = "block";
   document.querySelector("#login-container").style.display = loggedIn
     ? "none"
@@ -81,5 +81,6 @@ export function toggleLoginStatus(loggedIn) {
   }
 
   for (var i = 0; i < userRoutes.length; i++) {
-    }
+    userRoutes[i].style.display = isUser ? "block" : "none"; // or any other value you want
+  }
 }

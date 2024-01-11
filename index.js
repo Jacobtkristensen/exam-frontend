@@ -5,13 +5,14 @@ import { setActiveLink, loadHtml, renderHtml } from "./utility.js";
 import { initHome } from "./pages/home/home.js";
 import { initSignup } from "./pages/signup/signup.js";
 import { initLogin, toggleLoginStatus, logout } from "./pages/login/login.js";
+import { initHotelsAdmin } from "./pages/hotels/hotels-admin.js";
 
 window.addEventListener("load", async () => {
   const templateHome = await loadHtml("./pages/home/home.html");
   const templateSignup = await loadHtml("./pages/signup/signup.html");
   const templateNotFound = await loadHtml("./pages/notFound/notFound.html");
   const templateLogin = await loadHtml("./pages/login/login.html");
-
+  const templateHotelAdmin = await loadHtml("./pages/hotels/hotels-admin.html");
   //If token existed, for example after a refresh, set UI accordingly
   const token = localStorage.getItem("token");
   toggleLoginStatus(token);
@@ -42,7 +43,11 @@ window.addEventListener("load", async () => {
       "/logout": () => {
         ()=> router.navigate("/")
         logout()
-      }
+      },
+      "/hotels-admin": (match) => {
+        renderHtml(templateHotelAdmin, "content");
+        initHotelsAdmin();
+      },
     })
     .notFound(() => {
       renderHtml(templateNotFound, "content");

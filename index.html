@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -15,16 +14,17 @@
     crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/2.4.0/purify.min.js"></script>
   <script src="index.js" type="module"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
   <link rel="stylesheet" href="./styles.css" />
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
-<body style="font-family: sans-serif">
+<body>
   <nav class="navbar navbar-expand-lg sticky-top bg-white shadow navbar-custom" style="display: none">
     <div class="container">
-      <a class="navbar-brand px-sm-2" href="#/" style="color: rgb(61, 59, 59)">
-        <span style="color: #01c101">Holy</span>Macaroni
+      <a class="navbar-brand px-sm-2" href="#/" style="color: rgb(20, 18, 18)">
+        <span style="color: #DD6031">Holy</span>Macaroni
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
         aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -32,8 +32,11 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul id="menu" class="navbar-nav ms-auto">
+          <li class="nav-item px-sm-2 ">
+            <a class="nav-link" href="/hotels-admin" style="color: rgb(20, 18, 18)" data-navigo>Hotels(Admin)</a>
+          </li>
           <li class="nav-item px-sm-2">
-            <a class="nav-link" href="/" style="color: rgb(20, 18, 18)" data-navigo>Dummy Link</a>
+            <a class="nav-link" href="/events" style="color: rgb(20, 18, 18)" data-navigo>Events</a>
           </li>
           <li class="nav-item px-sm-2" id="signup-container">
             <a class="nav-link" href="/signup" style="color: rgb(20, 18, 18)" data-navigo>Signup</a>
