@@ -1,35 +1,39 @@
 <div class="template" id="signup-form-container">
   <div id="form-box">
-      <form class="row g-3">
+    <form class="row g-3">
         <div class="text-center">
-          <h1>Signup</h1>
+            <h1>Signup</h1>
         </div>
         <div class="mb-1">
-          <input type="text" class="form-control" id="input-username" placeholder="Skriv et brugernavn" required />
-          <div id="invalid-feedback-username" style="color: red"></div>
+            <input type="text" class="form-control" id="input-username" placeholder="Username" required />
+            <p id="invalid-feedback-username" style="color: red"></p>
         </div>
         <div class="mb-1">
-          <input type="email" class="form-control" id="input-email" placeholder="Skriv din e-mail" required />
-          <div id="invalid-feedback-email" style="color: red"></div>
+            <input type="email" class="form-control" id="input-email" placeholder="E-mail" required />
+            <p id="invalid-feedback-email" style="color: red"></p>
         </div>
         <div class="mb-1">
-          <input type="text" class="form-control" id="input-phone" placeholder="Skriv dit telefonnummer" required />
-          <div></div>
+            <input type="text" class="form-control" id="input-firstname" placeholder="First name" required />
         </div>
         <div class="mb-1">
-          <input type="password" class="form-control" id="input-password" placeholder="Kodeord" required />
-          <div id="invalid-feedback-pw" style="color: red"></div>
+            <input type="text" class="form-control" id="input-lastname" placeholder="Last name" required />
         </div>
         <div class="mb-1">
-          <input type="password" class="form-control" id="input-password2" placeholder="Gentag kodeord" required />
-          <div id="invalid-feedback-pw-2" style="color: red"></div>
+            <input type="text" class="form-control" id="input-phone" placeholder="Phone number" required />
+        </div>
+        <div class="mb-1">
+            <input type="password" class="form-control" id="input-password" placeholder="Password" required />
+        </div>
+        <div class="mb-1">
+          <input type="password" class="form-control" id="input-password2" placeholder="Repeat password" required />
+          <p id="invalid-feedback-pw2" style="color: red"></p>
         </div>
         <div class="col-12 text-center">
-          <button class="btn btn-primary" type="submit" id="btn-signup">
-            Opret bruger
-          </button>
+            <button class="btn btn-primary" type="submit" id="btn-signup">
+                Create User
+            </button>
         </div>
-      </form>
-  
-  </div>
+    </form>
+</div>
+
 </div>

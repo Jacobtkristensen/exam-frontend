@@ -6,13 +6,14 @@ import { initHome } from "./pages/home/home.js";
 import { initSignup } from "./pages/signup/signup.js";
 import { initLogin, toggleLoginStatus, logout } from "./pages/login/login.js";
 import { initHotelsAdmin } from "./pages/hotels/hotels-admin.js";
-
+import { initHotels } from "./pages/hotels/hotels.js";
 window.addEventListener("load", async () => {
   const templateHome = await loadHtml("./pages/home/home.html");
   const templateSignup = await loadHtml("./pages/signup/signup.html");
   const templateNotFound = await loadHtml("./pages/notFound/notFound.html");
   const templateLogin = await loadHtml("./pages/login/login.html");
   const templateHotelAdmin = await loadHtml("./pages/hotels/hotels-admin.html");
+  const templateHotel = await loadHtml("./pages/hotels/hotels.html");
   //If token existed, for example after a refresh, set UI accordingly
   const token = localStorage.getItem("token");
   toggleLoginStatus(token);
@@ -47,6 +48,10 @@ window.addEventListener("load", async () => {
       "/hotels-admin": (match) => {
         renderHtml(templateHotelAdmin, "content");
         initHotelsAdmin();
+      },
+      "/hotels": (match) => {
+        renderHtml(templateHotel, "content");
+        initHotels();
       },
     })
     .notFound(() => {

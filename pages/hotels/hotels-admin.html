@@ -7,7 +7,8 @@
                 </p>
             </div>
             <div class="d-flex flex-row-reverse ">
-                <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#addHotelModal" id="add-hotel-button">Add hotel</button>
+                <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#addHotelModal"
+                    id="add-hotel-button">Add hotel</button>
             </div>
         </div>
         <div class="row">
@@ -69,49 +70,50 @@
             </div>
         </div>
     </div>
-<!-- ADD HOTEL MODAL -->
-<div class="modal fade" id="addHotelModal" tabindex="-1" aria-labelledby="addHotelLabel" aria-hidden="true">
-    <div class="modal-dialog modal-xl">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h1 class="modal-title fs-5" id="addHotelLabel">Add Hotel</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <form id="add-hotel-form">
-                    <div class="mb-3">
-                        <label for="modal-hotel-name-add" class="col-form-label">Hotel name:</label>
-                        <input type="text" class="form-control" id="modal-hotel-name-add">
-                    </div>
+    <!-- ADD HOTEL MODAL -->
+    <div class="modal fade" id="addHotelModal" tabindex="-1" aria-labelledby="addHotelLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="addHotelLabel">Add Hotel</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="add-hotel-form">
+                        <div class="mb-3">
+                            <label for="modal-hotel-name-add" class="col-form-label">Hotel name:</label>
+                            <input type="text" class="form-control" id="modal-hotel-name-add">
+                        </div>
 
-                    <div class="mb-3">
-                        <label for="modal-hotel-street-add" class="col-form-label">Hotel street:</label>
-                        <input type="text" class="form-control" id="modal-hotel-street-add">
-                    </div>
+                        <div class="mb-3">
+                            <label for="modal-hotel-street-add" class="col-form-label">Hotel street:</label>
+                            <input type="text" class="form-control" id="modal-hotel-street-add">
+                        </div>
 
-                    <div class="mb-3">
-                        <label for="modal-hotel-zip-add" class="col-form-label">Hotel ZIP:</label>
-                        <input type="text" class="form-control" id="modal-hotel-zip-add">
-                    </div>
+                        <div class="mb-3">
+                            <label for="modal-hotel-zip-add" class="col-form-label">Hotel ZIP:</label>
+                            <input type="text" class="form-control" id="modal-hotel-zip-add">
+                        </div>
 
-                    <div class="mb-3">
-                        <label for="modal-hotel-city-add" class="col-form-label">Hotel city:</label>
-                        <input type="text" class="form-control" id="modal-hotel-city-add">
-                    </div>
+                        <div class="mb-3">
+                            <label for="modal-hotel-city-add" class="col-form-label">Hotel city:</label>
+                            <input type="text" class="form-control" id="modal-hotel-city-add">
+                        </div>
 
-                    <div class="mb-3">
-                        <label for="modal-hotel-country-add" class="col-form-label">Hotel country:</label>
-                        <input type="text" class="form-control" id="modal-hotel-country-add">
-                    </div>
-                </form>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                <button type="button" class="btn btn-success" id="save-add-hotel-button" onclick="addHotel()">Add hotel</button>
+                        <div class="mb-3">
+                            <label for="modal-hotel-country-add" class="col-form-label">Hotel country:</label>
+                            <input type="text" class="form-control" id="modal-hotel-country-add">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-success" id="save-add-hotel-button" data-bs-dismiss="modal">Add
+                        hotel</button>
+                </div>
             </div>
         </div>
     </div>
-</div>
     <!-- EDIT HOTEL MODAL -->
     <div class="modal fade" id="editHotelModal" tabindex="-1" aria-labelledby="editHotelLabel" aria-hidden="true">
         <div class="modal-dialog modal-xl">
@@ -151,11 +153,53 @@
                     </form>
                 </div>
                 <div class="modal-footer d-flex justify-content-between">
-                    <button type="button" class="btn btn-danger" id="del-button-modal" data-bs-dismiss="modal">Delete</button>
+                    <button type="button" class="btn btn-danger" id="del-button-modal"
+                        data-bs-dismiss="modal">Delete</button>
                     <div>
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                        <button type="button" class="btn btn-primary" id="save-hotel-button" data-bs-dismiss="modal">Save Changes</button>
+                        <button type="button" class="btn btn-primary" id="save-hotel-button"
+                            data-bs-dismiss="modal">Save Changes</button>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ADD ROOM MODAL -->
+    <div class="modal fade" id="addRoomModal" tabindex="-1" aria-labelledby="addRoomLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="addRoomLabel">Add Room</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="add-room-form">
+                        <div class="mb-3">
+                            <label for="modal-room-number-add" class="col-form-label">Room number:</label>
+                            <input type="text" class="form-control" id="modal-room-number-add">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="modal-number-of-beds-add" class="col-form-label">Number of Beds:</label>
+                            <input type="number" class="form-control" id="modal-number-of-beds-add">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="modal-base-price-add" class="col-form-label">Base Price:</label>
+                            <input type="number" step="0.01" class="form-control" id="modal-base-price-add">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="modal-bed-price-add" class="col-form-label">Bed Price:</label>
+                            <input type="number" step="0.01" class="form-control" id="modal-bed-price-add">
+                        </div>
+
+                        <input type="hidden" id="modal-hotel-id-add">
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-success" id="save-add-room-button" data-bs-dismiss="modal">Add Room</button>
                 </div>
             </div>
         </div>
