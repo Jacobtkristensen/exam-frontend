@@ -74,7 +74,7 @@ async function addHotel() {
         city: city,
         country: country,
     };
-    await fetch(URL, makeOptions("POST", data)).then(
+    await fetch(URL, makeOptions("POST", data, true)).then(
         handleHttpErrors
     );
     fetchHotels();
@@ -117,7 +117,7 @@ async function editHotelModal(evt) {
         const hotelId = evt.target.id.split("_")[1];
         const hotel = await fetch(
             URL + "/" + hotelId,
-            makeOptions("GET", null, false)
+            makeOptions("GET", null, true)
         ).then(handleHttpErrors);
         console.log(hotel);
         console.log(hotel.id);
@@ -192,7 +192,7 @@ async function addRoom() {
     };
     await fetch(
         API_URL + "/rooms",
-        makeOptions("POST", addRoomRequest)
+        makeOptions("POST", addRoomRequest, true)
     ).then(handleHttpErrors);
     fetchHotels();
 }
