@@ -47,27 +47,6 @@ async function fetchHotels() {
     });
 
 }
-async function addHotel() {
-    event.preventDefault();
-    const name = document.querySelector("#modal-hotel-name-add").value;
-    const street = document.querySelector("#modal-hotel-street-add").value;
-    const zip = document.querySelector("#modal-hotel-zip-add").value;
-    const city = document.querySelector("#modal-hotel-city-add").value;
-    const country = document.querySelector("#modal-hotel-country-add").value;
-
-    const data = {
-        name: name,
-        street: street,
-        zip: zip,
-        city: city,
-        country: country,
-    };
-    await fetch(URL, makeOptions("POST", data)).then(
-        handleHttpErrors
-    );
-    fetchHotels();
-}
-
 async function showHotelInfo(evt) {
     if (evt.target.classList.contains("hotel-info-btn")) {
         const hotelId = evt.target.id.split("_")[1];
