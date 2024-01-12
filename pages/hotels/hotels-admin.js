@@ -74,6 +74,7 @@ async function addHotel() {
         city: city,
         country: country,
     };
+    console.log(data);
     await fetch(URL, makeOptions("POST", data, true)).then(
         handleHttpErrors
     );
@@ -83,32 +84,15 @@ async function addHotel() {
 async function showHotelInfo(evt) {
     if (evt.target.classList.contains("hotel-info-btn")) {
         const hotelId = evt.target.id.split("_")[1];
-        const hotel = await fetch(
-            URL + "/" + hotelId,
-            makeOptions("GET", null, false)
-        ).then(handleHttpErrors);
-        console.log(hotel);
-        console.log(hotel.id);
-        document.querySelector(
-            "#modal-hotel-id-info"
-        ).innerText = `ID: ${hotel.id}`;
-        document.querySelector(
-            "#modal-hotel-name"
-        ).innerText = `Name: ${hotel.name}`;
+        const hotel = await fetch(URL + "/" + hotelId,makeOptions("GET", null, false)).then(handleHttpErrors);
+        document.querySelector("#modal-hotel-id-info").innerText = `ID: ${hotel.id}`;
+        document.querySelector("#modal-hotel-name").innerText = `Name: ${hotel.name}`;
         document.querySelector("#hotel-info-modal-title").innerText = hotel.name;
-        document.querySelector(
-            "#modal-hotel-street"
-        ).innerText = `Street: ${hotel.street}`;
+        document.querySelector("#modal-hotel-street").innerText = `Street: ${hotel.street}`;
         document.querySelector("#modal-hotel-zip").innerText = `Zip: ${hotel.zip}`;
-        document.querySelector(
-            "#modal-hotel-city"
-        ).innerText = `City: ${hotel.city}`;
-        document.querySelector(
-            "#modal-hotel-country"
-        ).innerText = `Country: ${hotel.country}`;
-        document.querySelector(
-            "#modal-hotel-rooms"
-        ).innerText = `Number of rooms: ${hotel.noOfRooms}`;
+        document.querySelector("#modal-hotel-city").innerText = `City: ${hotel.city}`;
+        document.querySelector("#modal-hotel-country").innerText = `Country: ${hotel.country}`;
+        document.querySelector("#modal-hotel-rooms").innerText = `Number of rooms: ${hotel.noOfRooms}`;
     }
 }
 
@@ -119,8 +103,6 @@ async function editHotelModal(evt) {
             URL + "/" + hotelId,
             makeOptions("GET", null, true)
         ).then(handleHttpErrors);
-        console.log(hotel);
-        console.log(hotel.id);
         document.querySelector("#modal-hotel-id").value = hotel.id;
         document.querySelector("#modal-hotel-name-edit").value = hotel.name;
         document.querySelector("#modal-hotel-street-edit").value = hotel.street;
@@ -160,6 +142,7 @@ async function editHotel() {
         city: city,
         country: country,
     };
+    console.log(editHotelRequest)
     await fetch(
         URL + "/" + id,
         makeOptions("PATCH", editHotelRequest, true)
@@ -190,6 +173,7 @@ async function addRoom() {
         bedPrice: bedPrice,
         hotelId: hotelId,
     };
+    console.log(addRoomRequest)
     await fetch(
         API_URL + "/rooms",
         makeOptions("POST", addRoomRequest, true)

@@ -54,8 +54,6 @@ async function showHotelInfo(evt) {
             URL + "/" + hotelId,
             makeOptions("GET", null, false)
         ).then(handleHttpErrors);
-        console.log(hotel);
-        console.log(hotel.id);
         document.querySelector(
             "#modal-hotel-id-info"
         ).innerText = `ID: ${hotel.id}`;
