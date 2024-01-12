@@ -3,6 +3,7 @@ html {
   font-family: 'Roboto', sans-serif;
 }
 /* DIV RED BORDER SETUP */
+/* Brugt til at se omrids af elementer */
 /* div{
   border: dotted red 1px;
 } */
@@ -13,13 +14,12 @@ html {
   justify-content: center;
   margin-top: 5px;
 }
-
 #login-form-container {
   display: flex;
   justify-content: center;
   margin-top: 5px;
 }
-#form-box {
+#login-box {
   display: flex;
   justify-content: center;
   margin-top: 30px;
@@ -45,8 +45,7 @@ html {
   margin-top: 5px;
 }
 
-/* TRY BUTTON*/
-
+/* Find Hotel! BUTTON*/
 .btn-lg:hover {
   transform: scale(1.1);
 }
@@ -64,12 +63,4 @@ html {
   100% {
     transform: scale(1);
   }
-}
-#selectionLimitModal {
-  display: none;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 1050; /* Ensure modal is on top */
 }
