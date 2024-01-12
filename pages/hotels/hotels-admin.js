@@ -74,7 +74,6 @@ async function addHotel() {
         city: city,
         country: country,
     };
-    console.log(data);
     await fetch(URL, makeOptions("POST", data, true)).then(
         handleHttpErrors
     );
@@ -142,7 +141,6 @@ async function editHotel() {
         city: city,
         country: country,
     };
-    console.log(editHotelRequest)
     await fetch(
         URL + "/" + id,
         makeOptions("PATCH", editHotelRequest, true)
@@ -173,7 +171,6 @@ async function addRoom() {
         bedPrice: bedPrice,
         hotelId: hotelId,
     };
-    console.log(addRoomRequest)
     await fetch(
         API_URL + "/rooms",
         makeOptions("POST", addRoomRequest, true)
