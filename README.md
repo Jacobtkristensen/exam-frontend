@@ -1,4 +1,4 @@
-# Greenplate foodwaste project
+# Quickbook project
 
 ## Frontend for programming exam January '24
 
